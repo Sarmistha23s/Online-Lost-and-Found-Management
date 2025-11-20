@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+        header {
+            background: #1a73e8;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            width: 50%;
+            margin: 25px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background: #1a73e8;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0f5fc0;
+        }
+    </style>
+</head>
+<body>
+
+<header>Report Lost Item</header>
+
+<div class="container">
+    <form>
+        <label>Item Name:</label>
+        <input type="text" required>
+
+        <label>Category:</label>
+        <select>
+            <option>Electronics</option>
+            <option>Documents</option>
+            <option>Clothing</option>
+            <option>Accessories</option>
+            <option>Others</option>
+        </select>
+
+        <label>Description:</label>
+        <textarea rows="4" required></textarea>
+
+        <label>Date Lost:</label>
+        <input type="date" required>
+
+        <label>Location Lost:</label>
+        <input type="text" required>
+
+        <label>Your Contact Information:</label>
+        <input type="text" required>
+
+        <button>Submit Report</button>
+    </form>
+</div>
+
+</body>
+</html>

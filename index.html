@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost & Found Management System</title>
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #eef1f7, #e3e8ff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #4e54c8;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4e54c8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #4e54c8;
+    }
+
+    .hero p {
+      margin: 15px 0;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Option cards */
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .option-card {
+      background: white;
+      width: 200px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .option-card i {
+      font-size: 3rem;
+      color: #4e54c8;
+    }
+
+    .option-card h3 {
+      margin-top: 12px;
+    }
+
+    .option-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    #about, #features, #contact, #feedback {
+      background: white;
+      margin: 40px 80px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 50px;
+    }
+
+    #about h2, #features h2, #contact h2, #feedback h2 {
+      color: #4e54c8;
+      margin-bottom: 20px;
+    }
+
+    #features ul {
+      list-style: none;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    #features li {
+      margin: 10px 0;
+    }
+
+    /* Feedback */
+    .feedback-box {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #f9f9ff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .feedback-box p {
+      margin-bottom: 15px;
+      font-style: italic;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      background: #4e54c8;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Lost & Found Management System</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Find What You Lost, Return What You Found</h2>
+    <p>Your trusted platform to report, search, and manage lost and found items.</p>
+
+    <!-- LOGIN OPTIONS -->
+    <div class="options">
+      <div class="option-card" onclick="window.location.href='user-login.html'">
+        <i class="ri-user-line"></i>
+        <h3>User Login</h3>
+      </div>
+
+      <div class="option-card" onclick="window.location.href='admin-login.html'">
+        <i class="ri-admin-line"></i>
+        <h3>Admin Login</h3>
+      </div>
+    </div>
+
+    <!-- LOST & FOUND OPTIONS -->
+    <div class="options">
+    <a href="report-lost.html" class="btn">Report Lost Item</a>
+    <a href="report-found.html" class="btn">Report Found Item</a>
+</div>
+
+<style>
+.options {
+    text-align: center;
+    margin-top: 30px;
+}
+.btn {
+    padding: 15px 25px;
+    margin: 10px;
+    background: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+.btn:hover {
+    background: #0f5fc0;
+}
+</style>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We help people reconnect with their lost belongings using a smooth and secure digital process.</p>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>📌 Report Lost or Found Items</li>
+      <li>🔍 Smart Search & Auto-Match (in Found section)</li>
+      <li>📱 Real-Time Notifications</li>
+      <li>📁 Categorized Item Listing</li>
+      <li>🔒 Secure Login for Users & Admins</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@lostfound.com</p>
+    <p>Phone: +91 98765 43210</p>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section id="feedback">
+    <h2>Customer Feedback</h2>
+    <div class="feedback-box">
+      <p>“I found my lost bag within 48 hours!” – <b>Riya</b></p>
+      <p>“The auto-match feature is amazing.” – <b>Rahul</b></p>
+      <p>“Clean UI and easy to use.” – <b>Ananya</b></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lost & Found Management System | All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
